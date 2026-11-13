@@ -1,39 +1,28 @@
-# 📱 ĐỒ ÁN BẢO ĐẢM CHẤT LƯỢNG PHẦN MỀM
-## KIỂM THỬ TỰ ĐỘNG & THỦ CÔNG HỆ THỐNG WEBSITE BÁN ĐIỆN THOẠI (PHONESTORE)
+# 📱 PhoneStore Automation Testing & Quality Assurance Suite
+### Giải Pháp Kiểm Thử Tự Động & Thủ Công Toàn Diện Cho Hệ Thống Website Thương Mại Điện Tử Bán Điện Thoại
 
----
-
-> **TRƯỜNG ĐẠI HỌC NGOẠI NGỮ - TIN HỌC THÀNH PHỐ HỒ CHÍ MINH (HUFLIT)**  
-> **KHOA CÔNG NGHỆ THÔNG TIN**  
-> **Môn học:** Bảo Đảm Chất Lượng Phần Mềm  
-> **Giảng viên hướng dẫn:** ThS. Tiếu Phùng Mai Sương  
-> **Học kỳ / Niên khóa:** Học kỳ 2, Năm học 2026 - 2027 (Báo cáo hoàn thành: Tháng 04/2026)
-
----
-
-## 👥 THÀNH VIÊN NHÓM THỰC HIỆN
-
-| STT | Họ và Tên | Mã số sinh viên (MSSV) | Vai trò / Nhiệm vụ chính | % Đóng góp |
-| :---: | :--- | :---: | :--- | :---: |
-| 1 | **Phạm Ngọc Khôi Nguyên** | `23DH112357` | Trưởng nhóm, Thiết kế Test Requirements & Test Cases Admin, Xây dựng Kiến trúc Automation Framework (Selenium + NUnit + EPPlus), Code Test Script Admin | 20% (100% HT) |
-| 2 | **Nguyễn Thị Bích Trâm** | `23DH114644` | Phân tích yêu cầu, Thiết kế Test Cases Coupon/Membership/Profile, Kiểm thử GUI, Code Automation Test Coupon & User | 20% (100% HT) |
-| 3 | **Nguyễn Minh Tâm** | `23DH113118` | Phân tích yêu cầu, Thiết kế Test Cases Danh mục/Màu sắc/Đơn hàng, Kiểm thử GUI, Code Automation Test Category & Color | 20% (100% HT) |
-| 4 | **Huỳnh Đăng Khoa** | `23DH114385` | Thiết kế Test Requirements & Test Cases Phân hệ Customer, Kiểm thử chức năng Khách hàng, Code Automation Test Customer (Login/Register) | 20% (100% HT) |
-| 5 | **Phạm Thị Hồng** | `23DH111149` | Phân tích yêu cầu, Thiết kế và thực thi kiểm thử giao diện người dùng (GUI Testing), Tổng hợp báo cáo và tài liệu kiểm thử | 20% (100% HT) |
+[![.NET](https://img.shields.io/badge/.NET-10.0%20%7C%209.0-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
+[![C#](https://img.shields.io/badge/Language-C%23%20Latest-239120?logo=csharp&logoColor=white)](https://learn.microsoft.com/dotnet/csharp/)
+[![Selenium WebDriver](https://img.shields.io/badge/Selenium%20WebDriver-4.41.0-43B02A?logo=selenium&logoColor=white)](https://www.selenium.dev/)
+[![NUnit](https://img.shields.io/badge/Test%20Framework-NUnit%204.3.2-25A162?logo=nunit&logoColor=white)](https://nunit.org/)
+[![EPPlus](https://img.shields.io/badge/Data%20Engine-EPPlus%208.4.2-0078D4?logo=microsoftexcel&logoColor=white)](https://epplussoftware.com/)
+[![Tests Status](https://img.shields.io/badge/Automated%20Tests-174%20Cases-blue)](#-kết-quả-kiểm-thử-test-results--summary)
+[![Pass Rate](https://img.shields.io/badge/Pass%20Rate-67.2%25-brightgreen)](#-kết-quả-kiểm-thử-test-results--summary)
 
 ---
 
 ## 🎯 GIỚI THIỆU TỔNG QUAN DỰ ÁN
 
-Dự án là đồ án cuối kỳ của môn học **Bảo Đảm Chất Lượng Phần Mềm**, tập trung nghiên cứu, thiết kế và triển khai quy trình kiểm thử toàn diện cho hệ thống website thương mại điện tử **Quản Lý Bán Điện Thoại (PhoneStore)**. Hệ thống bao gồm hai phân hệ riêng biệt:
-1. **Phân hệ Quản trị (Admin / Người bán):** Cung cấp các công cụ vận hành toàn diện như đăng nhập xác thực, quản lý dashboard thống kê, quản lý sản phẩm, danh mục, màu sắc, chương trình khuyến mãi, mã giảm giá (coupon), đơn hàng, khách hàng, phân quyền và tài khoản nhân viên.
-2. **Phân hệ Khách hàng (Customer / Người mua):** Cung cấp các trải nghiệm mua sắm trực tuyến gồm đăng ký, đăng nhập, quản lý thông tin cá nhân, tìm kiếm/lọc sản phẩm, xem chi tiết, giỏ hàng, áp dụng mã giảm giá và đặt hàng thanh toán (COD hoặc thẻ tín dụng).
+Dự án cung cấp bộ giải pháp kiểm thử chất lượng phần mềm toàn diện (Software Quality Assurance & Automated Testing) cho hệ thống website thương mại điện tử **Quản Lý Bán Điện Thoại (PhoneStore)**. Hệ thống bao gồm hai phân hệ riêng biệt với các luồng nghiệp vụ tương tác phức tạp:
 
-### Các mục tiêu chính của đồ án:
-- **Chuẩn hóa tài liệu kiểm thử:** Xây dựng danh mục yêu cầu kiểm thử (**Test Requirements**) và bộ trường hợp kiểm thử (**Test Cases**) theo biểu mẫu chuẩn chuyên nghiệp (Black-box testing: Equivalence Partitioning, Boundary Value Analysis, Decision Table, Use Case Testing).
-- **Tự động hóa kiểm thử (Automation Testing):** Thiết kế và lập trình bộ kiểm thử tự động trên nền tảng **C# / .NET 10** kết hợp **Selenium WebDriver**, **NUnit**, áp dụng mô hình thiết kế **Page Object Model (POM)** và phương pháp **Data-Driven Testing (DDT)**.
-- **Tương tác dữ liệu hai chiều với Excel:** Tự động đọc dữ liệu test từ file `2117_Functional_Testcase.xlsx` bằng thư viện **EPPlus**, thực thi từng bước kịch bản và **tự động ghi đè kết quả kiểm thử thực tế (Actual Result, Pass/Fail, định dạng màu sắc trực quan, đường dẫn ảnh chụp màn hình lỗi)** ngược trở lại file Excel.
-- **Phát hiện và báo cáo lỗi (Bug Reporting):** Xác định các lỗi tiềm ẩn về validation nhập liệu, logic trừ/hoàn tồn kho, tính toán mã giảm giá và tính nhất quán dữ liệu giữa hai phân hệ Admin và Customer.
+1. **Phân hệ Quản trị (Admin / Quản lý cửa hàng):** Vận hành toàn bộ hệ thống bán hàng bao gồm đăng nhập xác thực, dashboard thống kê doanh thu, quản lý danh mục (Category), quản lý màu sắc (Color), quản lý sản phẩm (Product), chương trình khuyến mãi (Sale), mã giảm giá (Coupon), xử lý vòng đời đơn hàng (Order) và quản lý người dùng / phân quyền (RBAC).
+2. **Phân hệ Khách hàng (Customer / Người mua sắm):** Trải nghiệm mua sắm trực tuyến từ đăng ký tài khoản, đăng nhập, quản lý thông tin hồ sơ cá nhân, tìm kiếm và lọc sản phẩm, quản lý giỏ hàng, áp dụng coupon giảm giá và đặt hàng thanh toán (COD / Thẻ tín dụng).
+
+### Các mục tiêu kỹ thuật cốt lõi:
+- **Chuẩn hóa tài liệu kiểm thử:** Xây dựng danh mục yêu cầu kiểm thử (**Test Requirements**) và bộ trường hợp kiểm thử (**Test Cases**) theo phương pháp kiểm thử hộp đen (Equivalence Partitioning, Boundary Value Analysis, Decision Table, Use Case Testing).
+- **Tự động hóa kiểm thử (Automation Testing):** Xây dựng framework kiểm thử tự động mạnh mẽ trên nền tảng **C# / .NET 10** kết hợp **Selenium WebDriver**, **NUnit**, áp dụng mô hình thiết kế **Page Object Model (POM)** và phương pháp **Data-Driven Testing (DDT)**.
+- **Tương tác dữ liệu hai chiều với Excel:** Nạp kịch bản kiểm thử động từ file `2117_Functional_Testcase.xlsx` bằng thư viện **EPPlus**, thực thi từng bước kịch bản trên trình duyệt và **tự động ghi đè kết quả thực tế (Actual Result), trạng thái Pass/Fail (highlight màu sắc trực quan) kèm đường dẫn ảnh chụp màn hình lỗi (Failure Screenshot)** vào chính file Excel.
+- **Phát hiện và truy vết khiếm khuyết (Bug Detection):** Nhận diện các lỗi tiềm ẩn về validation dữ liệu nhập liệu, tính toàn vẹn nghiệp vụ, cơ chế trừ/hoàn tồn kho tự động và tính đồng bộ giữa hai phân hệ Admin và Customer.
 
 ---
 
@@ -41,35 +30,35 @@ Dự án là đồ án cuối kỳ của môn học **Bảo Đảm Chất Lượ
 
 | Hạng mục | Công nghệ / Thư viện | Phiên bản | Mục đích sử dụng |
 | :--- | :--- | :---: | :--- |
-| **Platform** | [.NET SDK](https://dotnet.microsoft.com/) | `10.0` / `9.0` | Nền tảng thực thi và biên dịch mã nguồn C# |
-| **Language** | [C#](https://learn.microsoft.com/dotnet/csharp/) | `Latest` (12/13) | Ngôn ngữ lập trình chính cho toàn bộ mã kiểm thử |
-| **Test Framework** | [NUnit](https://nunit.org/) | `4.3.2` | Framework quản lý ca kiểm thử, fixtures, setup/teardown và assertions |
-| **Test Runner** | [NUnit3TestAdapter](https://www.nuget.org/packages/NUnit3TestAdapter/) | `5.0.0` | Tích hợp NUnit với Visual Studio Test Explorer và `dotnet test` CLI |
-| **Test SDK** | [Microsoft.NET.Test.Sdk](https://www.nuget.org/packages/Microsoft.NET.Test.Sdk/) | `17.14.0` | Bộ công cụ kiểm thử của nền tảng .NET |
-| **Browser Automation** | [Selenium.WebDriver](https://www.selenium.dev/) | `4.41.0` | Điều khiển trình duyệt web tự động hóa các thao tác người dùng |
-| **Selenium Helpers** | [Selenium.Support](https://www.selenium.dev/) | `4.41.0` | Cung cấp `WebDriverWait`, `ExpectedConditions` cho việc đồng bộ giao diện |
-| **Web Browser / Driver** | Microsoft Edge / EdgeDriver | `Chromium-based` | Trình duyệt thực thi kiểm thử mặc định |
-| **Data Engine (Excel)** | [EPPlus](https://epplussoftware.com/) | `8.4.2` | Đọc và ghi dữ liệu kiểm thử trực tiếp vào file `.xlsx` mà không cần MS Office |
-| **Code Coverage** | [coverlet.collector](https://github.com/coverlet-coverage/coverlet) | `6.0.4` | Đo lường mức độ bao phủ mã kiểm thử |
+| **Nền tảng thực thi** | [.NET SDK](https://dotnet.microsoft.com/) | `10.0` / `9.0` | Nền tảng biên dịch và thực thi test suite |
+| **Ngôn ngữ lập trình** | [C#](https://learn.microsoft.com/dotnet/csharp/) | `Latest` (12/13) | Ngôn ngữ phát triển toàn bộ test framework |
+| **Test Framework** | [NUnit](https://nunit.org/) | `4.3.2` | Quản lý fixtures, test lifecycle, setup/teardown và assertions |
+| **Test Runner** | [NUnit3TestAdapter](https://www.nuget.org/packages/NUnit3TestAdapter/) | `5.0.0` | Kết nối NUnit với Visual Studio Test Explorer và `dotnet test` CLI |
+| **Test SDK** | [Microsoft.NET.Test.Sdk](https://www.nuget.org/packages/Microsoft.NET.Test.Sdk/) | `17.14.0` | SDK hỗ trợ hạ tầng kiểm thử cho .NET |
+| **Browser Automation** | [Selenium.WebDriver](https://www.selenium.dev/) | `4.41.0` | Điều khiển trình duyệt tự động hóa kịch bản người dùng |
+| **Selenium Support** | [Selenium.Support](https://www.selenium.dev/) | `4.41.0` | Cung cấp `WebDriverWait` phục vụ đồng bộ giao diện linh hoạt |
+| **Trình duyệt thực thi** | Microsoft Edge / EdgeDriver | `Chromium-based` | Trình duyệt thực thi kiểm thử mặc định |
+| **Data Engine (Excel)** | [EPPlus](https://epplussoftware.com/) | `8.4.2` | Đọc / ghi dữ liệu test trực tiếp vào file `.xlsx` tốc độ cao |
+| **Code Coverage** | [coverlet.collector](https://github.com/coverlet-coverage/coverlet) | `6.0.4` | Đo lường độ bao phủ mã kiểm thử |
 | **Quản lý phiên bản** | Git & GitHub | `Latest` | Quản lý mã nguồn dự án |
 
 ---
 
 ## 🏗 KIẾN TRÚC FRAMEWORK KIỂM THỬ (TEST ARCHITECTURE)
 
-Dự án được tổ chức bài bản theo kiến trúc phân lớp chuẩn doanh nghiệp, áp dụng hai mẫu thiết kế cốt lõi:
-1. **Page Object Model (POM):** Phân tách độc lập giữa bộ định vị phần tử giao diện (`Locators`), thao tác người dùng (`Actions/Methods`) và kịch bản kiểm thử (`Test Logic`). Khi UI có thay đổi, chỉ cần cập nhật tại lớp Page tương ứng.
+Dự án áp dụng mô hình phân lớp chuẩn doanh nghiệp với hai mẫu thiết kế nền tảng:
+1. **Page Object Model (POM):** Phân tách độc lập giữa bộ định vị phần tử (`Locators`), phương thức tương tác UI (`Actions/Methods`) và kịch bản kiểm thử (`Test Fixtures`). Khi giao diện website thay đổi, chỉ cần cập nhật tại lớp Page tương ứng mà không ảnh hưởng kịch bản test.
 2. **Data-Driven Testing (DDT):** Kịch bản kiểm thử nhận tham số động được nạp trực tiếp từ file Excel thông qua thuộc tính `[TestCaseSource(typeof(ExcelDataProvider), nameof(ExcelDataProvider.GetTestCases), ...)]`.
 
 ```mermaid
 flowchart TD
-    subgraph TestData_Layer["📁 Data Layer (Excel & Assets)"]
-        Excel["📊 2117_Functional_Testcase.xlsx<br/>- Sheet: Test Cases AD<br/>- Sheet: Test Cases CUS"]
+    subgraph Data_Layer["📁 Data Layer (Excel & Assets)"]
+        Excel["📊 2117_Functional_Testcase.xlsx<br/>• Sheet: Test Cases AD<br/>• Sheet: Test Cases CUS"]
         Images["🖼️ ImageTest/<br/>Ảnh mẫu upload sản phẩm"]
     end
 
     subgraph DataProvider_Layer["⚙️ Data Provider Layer"]
-        DataProvider["ExcelDataProvider.cs<br/>- ResolveExcelFilePath()<br/>- GetTestCases()<br/>- ClearOldResults()<br/>- WriteTestResults()"]
+        DataProvider["ExcelDataProvider.cs<br/>• ResolveExcelFilePath()<br/>• GetTestCases()<br/>• ClearOldResults()<br/>• WriteTestResults()"]
         Model["TestStep.cs<br/>(StepNumber, Action, TestData, Actual, Result)"]
     end
 
@@ -117,7 +106,7 @@ flowchart TD
 ```text
 DoAnCuoiKy/
 │
-├── 2117-Website bán điện thoại.pdf       # Báo cáo đồ án đầy đủ (60 trang, chi tiết lý thuyết, kịch bản, kết quả)
+├── 2117-Website bán điện thoại.pdf       # Báo cáo đồ án đầy đủ (Đặc tả chức năng, kịch bản, kết quả)
 ├── 2117_Functional_Testcase.xlsx        # File Test Requirements & Test Cases (514 TC Admin, 141 TC Customer)
 ├── DoAnCuoiKy.sln / DoAnCuoiKy.slnx     # Visual Studio Solution File
 │
@@ -185,10 +174,10 @@ DoAnCuoiKy/
 
 ## 📋 PHẠM VI KIỂM THỬ (TEST SCOPE)
 
-Dự án bao phủ toàn bộ các luồng nghiệp vụ của hệ thống thương mại điện tử:
+Bộ kiểm thử bao phủ toàn diện các luồng nghiệp vụ trên hệ thống:
 
 ### 1. Phân hệ Admin (Người bán - 12 nhóm chức năng chính)
-- **F1 - Đăng nhập Admin:** Đăng nhập tài khoản hợp lệ, chặn tài khoản không tồn tại, sai mật khẩu, để trống thông tin, kiểm tra giao diện GUI.
+- **F1 - Đăng nhập Admin:** Đăng nhập tài khoản hợp lệ, chặn tài khoản không tồn tại, mật khẩu sai, để trống trường bắt buộc, kiểm tra giao diện GUI.
 - **F2 - Dashboard & Thống kê:** Hiển thị tổng quan doanh thu, số lượng đơn hàng, biểu đồ, lọc theo ngày/tuần/tháng theo quyền Admin/Nhân viên.
 - **F3 - Quản lý Sản phẩm:** Thêm mới sản phẩm (upload ảnh, chọn danh mục, gán biến thể màu sắc, định dạng giá), xem chi tiết, sửa sản phẩm, xóa sản phẩm và tìm kiếm/lọc sản phẩm.
 - **F4 - Quản lý Danh mục (Category):** Thêm mới danh mục, cập nhật danh mục, xóa danh mục (ràng buộc không được xóa khi đang có sản phẩm liên kết), kiểm tra danh sách.
@@ -217,7 +206,7 @@ Dự án bao phủ toàn bộ các luồng nghiệp vụ của hệ thống thư
 
 ## 📊 KẾT QUẢ KIỂM THỬ (TEST RESULTS & SUMMARY)
 
-Dự án đã thiết kế và quản lý tổng cộng **827 Test Cases**, trong đó:
+Dự án thiết kế và quản lý tổng cộng **827 Test Cases**, trong đó:
 - **Manual Testing:** **653 Test Cases** (bao gồm 514 TC Admin và 141 TC Customer).
 - **Automation Testing (Selenium C# NUnit):** **174 Test Cases** được lập trình tự động hóa hoàn toàn.
 - **Tổng số lỗi (Defects/Bugs) phát hiện được:** **139 Bugs**.
@@ -250,16 +239,16 @@ Dự án đã thiết kế và quản lý tổng cộng **827 Test Cases**, tron
 
 ---
 
-### 2. Một số lỗi nghiêm trọng (Critical Defects) điển hình được phát hiện
+### 2. Các lỗi nghiêm trọng (Critical Defects) điển hình được phát hiện
 
-Qua quá trình kiểm thử tự động với Selenium WebDriver, nhóm đã ghi nhận nhiều khiếm khuyết nghiệp vụ và bảo mật nhập liệu trên website:
+Qua quá trình kiểm thử tự động với Selenium WebDriver, hệ thống phát hiện nhiều khiếm khuyết nghiệp vụ và bảo mật nhập liệu:
 
-1. **Lỗi `F3.1_02` (Thêm sản phẩm - Tên sản phẩm trùng lặp):** Hệ thống không kiểm tra tính duy nhất của tên sản phẩm, cho phép thêm mới sản phẩm có tên đã tồn tại trong cơ sở dữ liệu.
-2. **Lỗi `F3.1_06` (Thêm sản phẩm - Giá bán bằng 0 hoặc âm):** Form thêm sản phẩm chấp nhận giá bán $0$ VNĐ hoặc số âm mà không chặn lại hoặc cảnh báo lỗi.
+1. **Lỗi `F3.1_02` (Thêm sản phẩm - Tên sản phẩm trùng lặp):** Hệ thống không kiểm tra tính duy nhất của tên sản phẩm, cho phép tạo sản phẩm có tên đã tồn tại trong cơ sở dữ liệu.
+2. **Lỗi `F3.1_06` (Thêm sản phẩm - Giá bán bằng 0 hoặc âm):** Form thêm sản phẩm chấp nhận giá bán $0$ VNĐ hoặc số âm mà không cảnh báo lỗi hay chặn lưu.
 3. **Lỗi `F3.1_14` (Thêm sản phẩm - Tồn kho không hợp lệ):** Cho phép nhập số lượng tồn kho bằng 0 hoặc âm ngay tại thời điểm tạo mới.
-4. **Lỗi `F9.2_02` & `F9.2_03` & `F9.2_04` (Quản lý Coupon):** Form tạo coupon cho phép để mã code trống, chứa ký tự đặc biệt hoặc chứa khoảng trắng mà vẫn lưu thành công vào database.
-5. **Lỗi `F5.1_02/08/09/10` (Quản lý Màu sắc):** Hệ thống không validate định dạng mã màu Hex (ví dụ: nhập chuỗi chữ không hợp lệ vẫn lưu được, làm vỡ giao diện hiển thị màu phía khách hàng).
-6. **Lỗi `F1.5_02` & `F1.5_07` (Thông tin khách hàng):** Cho phép cập nhật Họ và Tên chứa số / ký tự đặc biệt; chấp nhận Số Điện Thoại không đúng định dạng 10 chữ số tiêu chuẩn Việt Nam.
+4. **Lỗi `F9.2_02` & `F9.2_03` & `F9.2_04` (Quản lý Coupon):** Form tạo coupon cho phép để mã code trống, chứa ký tự đặc biệt hoặc chứa khoảng trắng mà vẫn lưu thành công.
+5. **Lỗi `F5.1_02/08/09/10` (Quản lý Màu sắc):** Không validate định dạng mã màu Hex (nhập chuỗi ký tự bất kỳ vẫn lưu được, làm lỗi giao diện hiển thị bảng màu).
+6. **Lỗi `F1.5_02` & `F1.5_07` (Thông tin khách hàng):** Chấp nhận Họ và Tên chứa số / ký tự đặc biệt; chấp nhận Số Điện Thoại không đủ 10 chữ số tiêu chuẩn.
 
 ---
 
@@ -270,7 +259,7 @@ Qua quá trình kiểm thử tự động với Selenium WebDriver, nhóm đã g
 - Nền tảng: [.NET SDK 10.0](https://dotnet.microsoft.com/download) (hoặc tối thiểu .NET SDK 9.0)
 - Trình duyệt web: **Microsoft Edge** (phiên bản mới nhất)
 - Driver: Microsoft Edge WebDriver (tự động tải và đồng bộ với Selenium Manager của Selenium 4.x)
-- Phần mềm phát triển (khuyến nghị): Visual Studio 2022 (với workload .NET Desktop / Web) hoặc Visual Studio Code / JetBrains Rider.
+- IDE khuyến nghị: Visual Studio 2022 (với workload .NET Desktop / Web) hoặc Visual Studio Code / JetBrains Rider.
 
 ### 2. Cài đặt môi trường kiểm thử
 Mở Terminal hoặc PowerShell tại thư mục gốc của repository:
@@ -341,7 +330,7 @@ dotnet test --filter "FullyQualifiedName~Login_Customer"
 
 ## 📊 BÁO CÁO KẾT QUẢ KIỂM THỬ TỰ ĐỘNG (DYNAMIC REPORTING)
 
-Dự án sở hữu tính năng xuất báo cáo kiểm thử độc đáo thông qua `ExcelDataProvider`:
+Dự án sở hữu tính năng xuất báo cáo kiểm thử tự động thông qua `ExcelDataProvider`:
 1. **Ghi đè kết quả trực tiếp:** Sau mỗi kịch bản kiểm thử, Selenium sẽ lấy kết quả thực tế trên màn hình (`Actual Result`), so sánh với `Expected Result` trong file Excel.
 2. **Định dạng màu sắc trực quan:**
    - Trường hợp **Pass**: Ô kết quả tại cột 12 được gán giá trị `"Pass"` và tự động tô màu nền **Xanh nhạt** (`Color.LightGreen`).
@@ -349,7 +338,7 @@ Dự án sở hữu tính năng xuất báo cáo kiểm thử độc đáo thôn
 3. **Tự động chụp màn hình khi gặp lỗi (Auto Failure Screenshot):**
    - Khi một bước kiểm thử hoặc assertion thất bại, trình điều khiển tự động kích hoạt `((ITakesScreenshot)driver).GetScreenshot()` để lưu lại toàn bộ trạng thái màn hình tại thời điểm phát sinh lỗi vào thư mục:
      `bin/Debug/net10.0/Screenshots/<ModuleName>/<TestCaseID>_<yyyyMMdd_HHmmss>.png`
-   - Đường dẫn file ảnh chụp lỗi được tự động điền vào cột 13 (`Notes`) của hàng tương ứng trong file Excel, tạo bằng chứng lỗi (evidence) rõ ràng cho lập trình viên fix bug.
+   - Đường dẫn file ảnh chụp lỗi được tự động điền vào cột 13 (`Notes`) của hàng tương ứng trong file Excel, tạo bằng chứng lỗi (evidence) rõ ràng cho việc sửa lỗi.
 
 ---
 
@@ -359,7 +348,6 @@ Dự án sở hữu tính năng xuất báo cáo kiểm thử độc đáo thôn
 - **Kiến trúc chặt chẽ:** Triển khai đúng chuẩn mô hình Page Object Model (POM), dễ bảo trì và mở rộng khi giao diện thay đổi.
 - **Tự động hóa hoàn toàn với Excel:** Data-Driven Testing tự động nạp kịch bản từ file Excel quy chuẩn và ghi ngược báo cáo kết quả, giúp đồng bộ tuyệt đối giữa tài liệu kiểm thử thủ công và tự động.
 - **Bao phủ sâu rộng:** Kết hợp kiểm thử cả phân hệ Quản trị và Khách hàng với 827 test cases và phát hiện được 139 lỗi nghiệp vụ thực tế.
-- **Phân công làm việc hiệu quả:** Cả 5 thành viên trong nhóm đều tham gia đóng góp 100% nhiệm vụ được giao.
 
 ### 2. Các hạn chế cần khắc phục
 - Logic so sánh chuỗi (Assertion) ở chức năng *Xem danh sách danh mục* cần được chuẩn hóa lại để tránh false-fail do khác biệt định dạng khoảng trắng.
@@ -368,13 +356,11 @@ Dự án sở hữu tính năng xuất báo cáo kiểm thử độc đáo thôn
 
 ### 3. Hướng phát triển tiếp theo
 - **Tích hợp CI/CD Pipeline:** Thiết lập GitHub Actions với lệnh `dotnet test` tự động kích hoạt mỗi khi có pull request hoặc mã nguồn mới được đẩy lên repository.
-- **Kiểm thử hiệu năng (Performance Testing):** Sử dụng **Apache JMeter** để kiểm thử khả năng chịu tải (Load Testing, Stress Testing) của hệ thống khi có hàng ngàn người dùng truy cập và đặt hàng cùng lúc.
+- **Kiểm thử hiệu năng (Performance Testing):** Sử dụng **Apache JMeter** để kiểm thử khả năng chịu tải (Load Testing, Stress Testing) của hệ thống khi có nhiều người dùng truy cập và đặt hàng đồng thời.
 - **Kiểm thử bảo mật (Security Testing):** Ứng dụng công cụ **OWASP ZAP** để quét các lỗ hổng bảo mật phổ biến như SQL Injection, XSS, CSRF trên website.
 
 ---
 
-## 📜 BẢN QUYỀN & THÔNG TIN LIÊN HỆ
+## 📜 GIẤY PHÉP & ĐÓNG GÓP
 
-Đồ án được thực hiện phục vụ cho mục đích học tập và nghiên cứu môn học **Bảo Đảm Chất Lượng Phần Mềm** tại Trường Đại học Ngoại ngữ - Tin học TP.HCM (HUFLIT).
-
-Mọi ý kiến đóng góp hoặc thắc mắc về mã nguồn kiểm thử, vui lòng liên hệ nhóm sinh viên thực hiện qua email nội bộ trường hoặc tạo Issue trên kho lưu trữ mã nguồn này.
+Dự án phục vụ mục đích kiểm thử và nâng cao chất lượng phần mềm cho website PhoneStore. Mọi đóng góp, cải tiến kịch bản kiểm thử tự động đều có thể gửi qua Pull Request trên kho lưu trữ mã nguồn.
